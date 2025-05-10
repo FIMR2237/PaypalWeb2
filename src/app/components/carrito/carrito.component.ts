@@ -58,7 +58,7 @@ export class CarritoComponent implements OnInit, AfterViewInit {
     }
 
     const script = this.renderer.createElement('script');
-    script.src = `https://www.paypal.com/sdk/js?client-id=AU4LfGMYtluPGQkrvgjQsRiPKugLsUl2Ah7b_RyLpy7DpJsDUbm3JXO7IA3GEvlsRrD33iMmFkzOsCNH&currency=MXN`;
+    script.src = `https://www.paypal.com/sdk/js?client-id=EIQHlb9bvwdamPiUcPooiPyrzJLKoRDuv0zJEYTE7MyR8JYeDC1XLk1uGQZMrWmZqjC-a5NWPeiR6-4O&currency=MXN`;
     script.async = true;
     script.onload = () => {
       console.log('PayPal SDK loaded');

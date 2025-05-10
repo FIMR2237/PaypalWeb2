@@ -1,0 +1,45 @@
+<!-- Encabezado -->
+<header>
+  <h1>CapZone</h1>
+  <input type="text" placeholder="Buscar productos..." />
+  <button class="catalogo-btn" (click)="irAlCatalogo()">Catálogo</button>
+</header>
+
+<h2>Carrito de Compras</h2>
+
+<!-- Mensaje carrito vacío -->
+<div *ngIf="carrito.length === 0">
+  <p>El carrito está vacío.</p>
+</div>
+
+<!-- Tabla del carrito -->
+<div *ngIf="carrito.length > 0">
+  <table class="carrito-table">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Precio</th>
+        <th>Cantidad</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let producto of carrito; let i = index">
+        <td>{{ producto.nombre }}</td>
+        <td>${{ producto.precio }}</td>
+        <td>{{ producto.cantidad }}</td>
+        <td>
+          <button (click)="aumentarCantidad(i)" [disabled]="!isProductInStock(producto.id)">Agregar más</button>
+          <button (click)="disminuirCantidad(i)" [disabled]="producto.cantidad <= 1">Eliminar 1</button>
+          <button (click)="eliminarProducto(producto.id)">Eliminar todo</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Sección de acciones -->
+<div class="actions">
+  <div id="paypal-button-container" *ngIf="carrito.length > 0"></div>
+  <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+</div>

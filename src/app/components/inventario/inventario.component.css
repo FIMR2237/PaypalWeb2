@@ -1,0 +1,214 @@
+/* Estilos generales */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Mantengo la fuente del primero */
+  margin: 0;
+  padding: 20px;
+  background-color: #fff; /* Fondo blanco más simple, como el segundo ejemplo implícito */
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px; /* Margen más simple como el segundo ejemplo */
+  color: #333; /* Color más neutro */
+}
+
+/* Contenedor principal */
+.form-container {
+  margin-bottom: 20px; /* Del segundo ejemplo */
+  padding: 20px; /* Del segundo ejemplo */
+  border: 1px solid #ccc; /* Borde simple del segundo ejemplo */
+  border-radius: 5px; /* Radio del segundo ejemplo */
+}
+
+/* Formulario */
+.form-container div {
+  margin-bottom: 10px; /* Espaciado del segundo ejemplo */
+}
+
+.form-container label {
+  display: inline-block; /* Del segundo ejemplo */
+  width: 100px; /* Ancho fijo del segundo ejemplo */
+  color: #333; /* Color neutro */
+}
+
+.form-container input {
+  padding: 5px; /* Padding del segundo ejemplo */
+  width: 200px; /* Ancho fijo del segundo ejemplo */
+  border: 1px solid #ccc; /* Borde simple */
+  border-radius: 5px; /* Radio del segundo ejemplo */
+}
+
+/* Botones */
+button {
+  padding: 5px 10px; /* Padding del segundo ejemplo para botones generales */
+  margin-right: 10px; /* Espaciado del segundo ejemplo */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-container button {
+  padding: 5px 10px; /* Botones dentro del formulario como el segundo ejemplo */
+}
+
+button[type="submit"] {
+  background-color: #3498db; /* Mantengo el azul del primero */
+  color: white;
+}
+
+button[type="submit"]:hover {
+  background-color: #2980b9;
+}
+
+button[type="button"] {
+  background-color: #95a5a6; /* Mantengo el gris del primero */
+  color: white;
+}
+
+button[type="button"]:hover {
+  background-color: #7f8c8d;
+}
+
+button[disabled] {
+  background-color: #ccc; /* Color más simple para deshabilitado */
+  cursor: not-allowed;
+}
+
+/* Tabla de productos */
+.product-table {
+  width: 100%; /* Del segundo ejemplo */
+  border-collapse: collapse; /* Del segundo ejemplo */
+  margin-bottom: 20px; /* Del segundo ejemplo */
+}
+
+.product-table th,
+.product-table td {
+  border: 1px solid #ccc; /* Borde simple del segundo ejemplo */
+  padding: 8px; /* Padding del segundo ejemplo */
+  text-align: left; /* Del segundo ejemplo */
+}
+
+.product-table th {
+  background-color: #f2f2f2; /* Fondo gris claro del segundo ejemplo */
+}
+
+.product-table tr:hover {
+  background-color: #f9f9f9; /* Hover más sutil, adaptado del primero */
+}
+
+.product-table img {
+  max-width: 50px; /* Mantengo del primero */
+  height: auto;
+  border-radius: 3px;
+}
+
+.product-table button {
+  margin-right: 5px; /* Espaciado del segundo ejemplo */
+  padding: 5px 10px; /* Padding del segundo ejemplo */
+}
+
+/* Vista de detalle */
+div[ngIf] > div {
+  padding: 20px;
+  border: 1px solid #ccc; /* Borde simple como el formulario */
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+div[ngIf] p {
+  margin: 10px 0;
+  color: #333;
+}
+
+div[ngIf] img {
+  margin-top: 15px;
+  border: 1px solid #ccc; /* Adaptado al estilo simple */
+  padding: 5px;
+}
+
+/* Acciones */
+.actions {
+  margin-top: 20px; /* Del segundo ejemplo */
+  text-align: center;
+}
+
+.actions button {
+  padding: 10px 20px; /* Padding del segundo ejemplo */
+  margin-right: 10px; /* Espaciado del segundo ejemplo */
+}
+
+/* Botón "Ir al catálogo" */
+.ir-catalogo-btn {
+  position: fixed; /* Del segundo ejemplo */
+  top: 15px; /* Del segundo ejemplo */
+  right: 15px; /* Del segundo ejemplo */
+  background-color: #28a745; /* Verde del segundo ejemplo */
+  color: white;
+  border: none;
+  padding: 12px 20px; /* Del segundo ejemplo */
+  border-radius: 8px; /* Del segundo ejemplo */
+  font-size: 1rem; /* Del segundo ejemplo */
+  font-weight: bold; /* Del segundo ejemplo */
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Del segundo ejemplo */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Del segundo ejemplo */
+  z-index: 1000; /* Del segundo ejemplo */
+}
+
+.ir-catalogo-btn:hover {
+  background-color: #218838; /* Hover del segundo ejemplo */
+  transform: scale(1.05); /* Efecto del segundo ejemplo */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .form-container {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .form-container div {
+    display: block; /* Simplifico para que los elementos se apilen */
+  }
+
+  .form-container label {
+    width: auto; /* Quito el ancho fijo en móvil */
+    margin-bottom: 5px;
+  }
+
+  .form-container input {
+    width: 100%; /* Ocupa todo el ancho en móvil */
+  }
+
+  .product-table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .product-table td {
+    min-width: 100px; /* Ajusto para mejor legibilidad */
+  }
+}
+
+/* Colores para acciones específicas */
+button[ng-reflect-router-link] {
+  background-color: #2ecc71; /* Mantengo del primero */
+}
+
+button[ng-reflect-router-link]:hover {
+  background-color: #27ae60;
+}
+
+button.danger {
+  background-color: #e74c3c; /* Mantengo del primero */
+}
+
+button.danger:hover {
+  background-color: #c0392b;
+}
+
+/* Estilos para estado de edición */
+.is-editing {
+  border-left: 4px solid #3498db; /* Mantengo del primero */
+  padding-left: 15px;
+}

@@ -1,0 +1,202 @@
+/* Estilos globales para la página */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #B3E5FC;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+.header {
+  background-color: #fff;
+  color: #333;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.header input[type="text"] {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 500px;
+  font-size: 1rem;
+}
+
+.ir-carrito-btn {
+  background-color: transparent;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.ir-carrito-btn img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Título del catálogo */
+h2 {
+  color: #fff;
+  text-align: left;
+  margin: 20px;
+}
+
+/* Mensajes de carga o vacío */
+div[ngIf] p {
+  color: #fff;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+/* Contenedor de productos */
+.productos {
+  display: flex;
+  flex-direction: row; /* Alineación horizontal como pediste antes */
+  gap: 20px;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow-x: auto; /* Desplazamiento horizontal */
+}
+
+/* Estilo de cada producto */
+.producto {
+  background-color: #424242;
+  border: none;
+  padding: 20px;
+  border-radius: 15px;
+  width: 175px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  flex-shrink: 0; /* Evita que se encojan */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.producto:hover {
+  transform: translateY(-5px);
+}
+
+/* Control estricto del tamaño de las imágenes */
+.producto img {
+  width: 80px; /* Tamaño fijo para todas las imágenes */
+  height: 80px; /* Altura fija para uniformidad */
+  border-radius: 8px;
+  margin: 0 auto 15px auto;
+  display: block;
+  object-fit: contain; /* Asegura que la imagen se ajuste sin distorsionarse */
+}
+
+
+.producto h3 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff;
+  margin: 0 0 8px 0;
+}
+
+.producto .precio {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  margin: 10px 0;
+}
+
+.producto p {
+  font-size: 0.9rem;
+  color: #B0BEC5;
+  margin: 5px 0;
+}
+
+/* Botón dentro del producto */
+.producto button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 10px;
+}
+
+.producto button:disabled {
+  background-color: #666;
+  cursor: not-allowed;
+}
+
+.producto button:not(:disabled):hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+}
+
+/* Contenedor de acciones */
+.actions {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.actions button {
+  background-color: #28a745;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.actions button:hover {
+  background-color: #218838;
+  transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .header input[type="text"] {
+    width: 100%;
+  }
+
+  .producto {
+    width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .producto {
+    width: 120px;
+  }
+
+  .producto img {
+    width: 60px; /* Tamaño más pequeño para pantallas pequeñas */
+    height: 60px;
+  }
+
+  .actions button {
+    width: 100%;
+    max-width: 200px;
+  }
+}

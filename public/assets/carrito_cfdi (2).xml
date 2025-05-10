@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cfdi:Comprobante Version="4.0" xmlns:cfdi="http://www.sat.gob.mx/cfd/4" xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/cfd/4 http://www.sat.gob.mx/cfd/4/cfdv40.xsd" Serie="A" Folio="12345" Fecha="2025-03-21T16:05:36.549Z" FormaPago="01" Moneda="MXN" SubTotal="1200.00" Descuento="0.00" Total="1392.00" TipoDeComprobante="I" MetodoPago="PUE" LugarExpedicion="99999">
+  <cfdi:Emisor Rfc="EMIS123456789" Nombre="Emisor SA de CV" RegimenFiscal="601"/>
+  <cfdi:Receptor Rfc="RECEP987654321" Nombre="Receptor SA de CV" UsoCFDI="G03"/>
+  <cfdi:Conceptos>
+    <cfdi:Concepto ClaveProdServ="10101504" Cantidad="1" ClaveUnidad="H87" Descripcion="Gorra gallo" ValorUnitario="600.00" Importe="600.00"/>
+    <cfdi:Concepto ClaveProdServ="10101504" Cantidad="1" ClaveUnidad="H87" Descripcion="Gorra Bass Pro Shop" ValorUnitario="600.00" Importe="600.00"/>
+  </cfdi:Conceptos>
+  <cfdi:Impuestos TotalImpuestosRetenidos="0.00" TotalImpuestosTrasladados="192.00">
+    <cfdi:Traslados>
+      <cfdi:Traslado Importe="192.00" TipoImpuesto="IVA" TasaImpuesto="16.00">
+        <cfdi:BaseImpuesto>1200.00</cfdi:BaseImpuesto>
+      </cfdi:Traslado>
+    </cfdi:Traslados>
+  </cfdi:Impuestos>
+  <cfdi:TimbreFiscalDigital Version="1.1" xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital">
+    <tfd:UUID>7E6492B9-43B7-418B-90C1-B174F2743242</tfd:UUID>
+    <tfd:FechaTimbrado>2025-03-21T16:05:36.549Z</tfd:FechaTimbrado>
+  </cfdi:TimbreFiscalDigital>
+<tfd:SelloCFD>v851/y2684/y74h75rD8757634343234324324324324324324324324324324324324324324324324</tfd:SelloCFD>
+</cfdi:Comprobante>

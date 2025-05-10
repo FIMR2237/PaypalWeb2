@@ -1,0 +1,267 @@
+/* Estilos generales */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #007bff;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  text-align: center;
+  color: #fff;
+  margin: 20px 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Contenedor del botón "Back" */
+.back-button-container {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  z-index: 100;
+}
+
+/* Estilo del botón "Back" */
+.back-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-button > svg {
+  margin-right: 5px;
+  font-size: 20px;
+  transition: all 0.4s ease-in;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+}
+
+.back-button:hover > svg {
+  transform: translateX(-5px);
+}
+
+/* Estilo del botón "Eliminar" */
+.delete-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.delete-button:hover {
+  background-color: #0056b3;
+  opacity: 0.85;
+}
+
+.delete-button .svgIcon {
+  width: 12px;
+}
+
+.delete-button .svgIcon path {
+  fill: white;
+}
+
+/* Mensaje carrito vacío */
+div[ngIf] > div:first-child {
+  text-align: center;
+  padding: 20px;
+  background: #fff;
+  color: #333;
+  border-radius: 8px;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+div[ngIf] > div:first-child p {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+/* Tabla del carrito */
+.carrito-table {
+  width: 90%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: #fff;
+  color: #333;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.carrito-table th,
+.carrito-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.carrito-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.carrito-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.carrito-table tr:hover {
+  background-color: #f1f1f1;
+  transition: background-color 0.3s ease;
+}
+
+/* Estilo para las imágenes */
+.producto-imagen {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+/* Estilo para la columna de acciones */
+.carrito-table td:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Estilo para el control de cantidad */
+.quantity-control {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.quantity-control button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.quantity-control button:hover:not([disabled]) {
+  background-color: #0056b3;
+  opacity: 0.85;
+}
+
+.quantity-control button[disabled] {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.quantity-control span {
+  min-width: 30px;
+  text-align: center;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Botones de acciones */
+button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+/* Botón Shop now (Pagar) */
+.btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+}
+
+/* Sección de acciones */
+.actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Contenedor del botón de PayPal */
+#paypal-button-container {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+/* Mensaje de error */
+.error-message {
+  color: #ff4d4d;
+  font-size: 1rem;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .carrito-table {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+  }
+
+  .carrito-table td {
+    min-width: 100px;
+    padding: 8px;
+  }
+
+  .producto-imagen {
+    width: 60px;
+    height: 60px;
+  }
+
+  button {
+    padding: 5px 8px;
+    font-size: 0.9rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .back-button-container {
+    top: 5px;
+    left: 10px;
+  }
+}

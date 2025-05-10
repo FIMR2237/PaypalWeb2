@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<productos>
+  <producto>
+    <id>1</id>
+    <nombre>Gorra NY</nombre>
+    <precio>1200</precio>
+    <imagen>/assets/NY.png</imagen>
+    <cantidad>0</cantidad>
+  </producto>
+  <producto>
+    <id>2</id>
+    <nombre>Gorra LA</nombre>
+    <precio>800</precio>
+    <imagen>/assets/LA.png</imagen>
+    <cantidad>9</cantidad>
+  </producto>
+  <producto>
+    <id>3</id>
+    <nombre>Gorra gallo</nombre>
+    <precio>600</precio>
+    <imagen>/assets/Gallo.png</imagen>
+    <cantidad>10</cantidad>
+  </producto>
+  <producto>
+    <id>4</id>
+    <nombre>Gorra Bass Pro Shop</nombre>
+    <precio>600</precio>
+    <imagen>/assets/bassproshop.jpg</imagen>
+    <cantidad>23</cantidad>
+  </producto>
+  <producto>
+    <id>5</id>
+    <nombre>Gorra Vaca</nombre>
+    <precio>600</precio>
+    <imagen>/assets/vaca.jpeg</imagen>
+    <cantidad>30</cantidad>
+  </producto>
+</productos>
